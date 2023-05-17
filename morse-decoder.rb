@@ -52,4 +52,9 @@ def decode_word (morse_word)
   english_word
 end
 
-puts(decode_word('-- -.--'))
+def decode_message(message)
+  words = message.split('  ')
+  words.map {  |word| decode_word(word) }.join(' ')
+end
+
+puts decode_message('      .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
