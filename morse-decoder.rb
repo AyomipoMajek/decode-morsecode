@@ -39,7 +39,17 @@
 
 
 def decode_char (morse_letter)
-   puts(@morse_code_alphabet.key(morse_letter))
+  @morse_code_alphabet.key(morse_letter)
 end
 
-print(decode_morse_letter('---'))
+def decode_word (morse_word)
+  morse_chars = morse_word.split(' ')
+  english_word = ''
+  morse_chars.each { |char|
+    puts(char)
+    english_word += decode_char(char)
+  }
+  english_word
+end
+
+puts(decode_word('-- -.--'))
