@@ -37,7 +37,6 @@
   '9' => '----.'
 }
 
-
 def decode_char(morse_letter)
   @morse_code_alphabet.key(morse_letter)
 end
